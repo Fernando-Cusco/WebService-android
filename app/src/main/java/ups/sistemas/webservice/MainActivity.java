@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -12,10 +15,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(this, "Hola", Toast.LENGTH_SHORT).show();
-<<<<<<< HEAD
-        Toast.makeText(this, "Hola", Toast.LENGTH_SHORT).show();
-=======
->>>>>>> master
+        String json = "{\n" +
+                "id: 1, \n" +
+                "name: 'London'" +
+                "}";
+
+        try {
+            JSONObject mjJson = new JSONObject(json);
+            
+        } catch (JSONException e){
+            e.printStackTrace();
+        }
+
     }
 }

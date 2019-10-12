@@ -3,13 +3,13 @@ package ups.sistemas.webservice;
 public class City {
     private int id;
     private String name;
-    private long habitantes;
+
 
     public City() {}
-    public City(int id, String name, long habitantes) {
+    public City(int id, String name) {
         this.id = id;
         this.name = name;
-        this.habitantes = habitantes;
+
     }
 
     public int getId() {
@@ -26,13 +26,5 @@ public class City {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public long getHabitantes() {
-        return habitantes;
-    }
-
-    public void setHabitantes(long habitantes) {
-        this.habitantes = habitantes;
     }
 }
